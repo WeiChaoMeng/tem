@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/auth/auth",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/put_disease/diseaseUpload",
+    "pages/disease_lamp/disease_lamp"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "iconPath": "resource/ico_home.png",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "resource/home_select.png",
+        "text": "首页"
+      },
+      {
+        "iconPath": "resource/ico_me.png",
+        "pagePath": "pages/logs/logs",
+        "selectedIconPath": "resource/me_select.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

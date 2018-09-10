@@ -1,0 +1,179 @@
+<!--pages/put disease/diseaseUpload.wxml-->
+<!-- 样式块 -->
+<view class='pro_message_block' >
+  <!-- 表单名称 -->
+  <view class='pro_message_title' >病害信息上传</view>
+    <view class='pro_boderTotitle' ></view>
+  <view class='text'>病害图片:</view>
+  <view class='image_block' >
+    <view wx:if="{{imageFilePaths.length != 0}}"  >
+      <view wx:for="{{imageFilePaths}}" wx:key="unique"  class='image_bundle' >
+        <image  src='{{item}}' class='image_content'
+         data-src='{{item}}' mode="scaleToFill" bindtap='showImage'  ></image>
+      </view>
+    </view>
+      <view class='add_image_bundle'>
+        <image class='add_image_content' src='/resource/addimage.png' 
+          bindtap='showPhoto' ></image>
+      </view>
+  </view>
+  <view class='pro_boderTotitle' ></view>
+  <form  bindsubmit="formSubmit"  bindreset="formReset">
+    <view class='protext_block' >
+
+      <view class='protext_bundle' >
+        <view  class='protext_title' >病害地址：</view>
+        <input name='disease_position' class='input_text' maxlength="30" placeholder="{{disease_position}}" value='{{disease_position}}' />
+      </view>
+
+      <view class='protext_bundle' >
+        <view  class='protext_title' >病害数量：</view>
+        <input  class='input_text' maxlength="10" type='number'
+          name='disease_number'  placeholder="{{disease_number}}"
+           value= "{{disease_number}}" />
+      </view>
+
+    </view>
+
+        <view class='protext_block' >
+
+      <view class='protext_bundle' >
+        <view  class='protext_title' >上传时间：</view>
+        <input  class='input_text'  maxlength="30"
+        name='collection_time' placeholder="{{collection_time}}" value='{{collection_time}}' />
+      </view>
+
+      <view class='protext_bundle' >
+        <view  class='protext_title' >上传人：</view>
+        <input class='input_text'  maxlength="10" 
+        name='collector' placeholder="最大输入长度10" value='{{collector}}' />
+      </view>
+
+    </view>
+
+    <view class='protext_block' >
+
+      <view class='picker_bundle' >
+        <view  class='picker_title'  >所属区域：</view>
+        <picker range-key	='name' class='pick_styl'  value="{{region_num}}" data-name='region_num' range="{{region}}"  name='region' bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{region[region_num].name}}
+          </text>
+        </picker>
+      </view>
+
+      <view class='picker_bundle' >
+        <view  class='picker_title' >道路名称：</view>
+        <picker range-key	='name' class='pick_styl' value="{{road_name_num}}" range="{{road_name}}"  name='road_name' data-name='road_name_num'  bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{road_name[road_name_num].name}}
+          </text>
+        </picker>
+      </view>
+
+    </view>
+
+    <view class='protext_block' >
+
+      <view class='picker_bundle' >
+        <view  class='picker_title'  >设施类别：</view>
+        <picker range-key	='name' class='pick_styl'  value="{{facility_category_num}}" range="{{facility_category}}"         name='facility_category' data-name='facility_category_num' bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{facility_category[facility_category_num].name}}
+          </text>
+        </picker>
+      </view>
+
+      <view class='picker_bundle' >
+        <view  class='picker_title' >病害描述：</view>
+        <picker range-key	='name' class='pick_styl' value="{{disease_describe_num}}" range="{{disease_describe}}"   name='disease_describe' data-name='disease_describe_num'   bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{disease_describe[disease_describe_num].name}}
+          </text>
+        </picker>
+      </view>
+
+    </view>
+
+    <view class='protext_block' >
+
+      <view class='picker_bundle' >
+        <view  class='picker_title'  >方向：</view>
+        <picker range-key	='name' class='pick_styl'  value="{{direction_num}}" range="{{direction}}"              name='direction' data-name= 'direction_num'  bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{direction[direction_num].name}}
+          </text>
+        </picker>
+      </view>
+
+      <view class='picker_bundle' >
+        <view  class='picker_title' >处理类型：</view>
+        <picker range-key	='name' class='pick_styl' value="{{dispose_type_num}}" range="{{dispose_type}}"  name='dispose_type'   data-name= 'dispose_type_num'  bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{dispose_type[dispose_type_num].name}}
+          </text>
+        </picker>
+      </view>
+
+    </view>
+
+    <view class='protext_block' >
+
+      <view class='picker_bundle' >
+        <view  class='picker_title'  >信息来源：</view>
+        <picker range-key	='name' class='pick_styl'  value="{{message_source_num}}" range="{{message_source}}"         name='message_source' data-name= 'message_source_num'  bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{message_source[message_source_num].name}}
+          </text>
+        </picker>
+      </view>
+
+      <view class='picker_bundle' >
+        <view  class='picker_title' >光源：</view>
+        <picker range-key	='name' class='pick_styl' value="{{light_source_num}}" range="{{light_source}}"  data-name= 'light_source_num'  name='light_source'   bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{light_source[light_source_num].name}}
+          </text>
+        </picker>
+      </view>
+
+    </view>
+
+    <view class='protext_block' >
+
+      <view class='picker_bundle' >
+        <view  class='picker_title'  >灯杆型材：</view>
+        <picker range-key	='name' class='pick_styl'  value="{{lamppost_profile_num}}" range="{{lamppost_profile}}"         name='lamppost_profile' data-name= 'lamppost_profile_num'    bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{lamppost_profile[lamppost_profile_num].name}}
+          </text>
+        </picker>
+      </view>
+
+      <view class='picker_bundle' >
+        <view  class='picker_title' >灯具型号：</view>
+        <picker range-key	='name' class='pick_styl' value="{{lamp_model_num}}" 
+         range="{{lamp_model}}"  name='lamp_model' data-name= 'lamp_model_num'     bindchange="bindPickerChange"  >
+          <text class='picker_text' >
+          {{lamp_model[lamp_model_num].name}}
+          </text>
+        </picker>
+      </view>
+
+    </view>
+
+
+
+    <view class='protext_block' >
+
+      <view class='textarea_bundle' >
+        <view  class='protext_title' >备注：</view>
+        <textarea class='textarea_cs' 
+          name='remarks'  placeholder="病害详细地址，详细情况" />
+      </view>
+    </view>
+    <view class='btn_bundle' >
+      <button formType="submit" class='userbtn' >提交</button>
+    </view>
+  </form>
+</view>

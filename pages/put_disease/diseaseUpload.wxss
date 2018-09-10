@@ -1,0 +1,208 @@
+/* pages/put disease/diseaseUpload.wxss */
+/* pages/message/message.wxss */
+.pro_message_block{
+  position: static;
+  width: 90%;
+  height: 1200px;
+  background-color: #fff;
+  margin: 15% 5% ;
+  border: 1px solid #ffefef;
+  box-shadow: -2px 3px 8px 2px rgb(245, 239, 239);
+}
+.pro_message_title{
+    font: 18px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    font-weight: bolder;
+    margin-left:50%;
+    margin-top:10%;
+}
+
+
+/** 大标题横线 **/
+
+.pro_boderTotitle{
+position: static;
+width:85%;
+height:1px;
+margin:8% 8%;
+background-color:#D5D5D5;
+overflow:hidden;
+}
+.text{
+  font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; 
+  text-align: left;
+  font-weight: bold;
+  margin-left: 5%;
+}
+.content {
+    width: 100%;
+    height: 25%;
+    margin-top: 5%;
+    padding-top: 2%;
+    overflow: hidden;
+}
+.prevImg {
+  float: left;
+  width: 25%;
+  height: 65%;
+  margin-left: 6%;
+  border: solid 1px rgb(87, 70, 70);
+}
+.addimage{
+  float: left;
+  width: 25%;
+  height: 13%;
+  margin-left: 6%;
+  border: solid 1px rgb(87, 70, 70);
+}
+.image_block{
+  position: static;
+  width: 100%;
+  height: 150px;
+}
+
+.image_table{
+  position: static;
+  width: 100%;
+  margin: 5% 5%;
+  display: block;
+  font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  font-weight: bolder;
+}
+.image_content{
+  position: static;
+  width: 100%;
+  height: 90px;
+  margin: 3% 4%;
+  float: left;
+  box-shadow:1px 1px 5px rgb(238, 236, 236); 
+  border:1px solid rgba(255, 255, 255, 0.897)
+}
+.image_bundle{
+  position: static;
+  width: 25%;
+  height: 100px;
+  margin: 1% 4%;
+  float: left;
+
+}
+
+.add_image_bundle{
+  position: relative;
+  width: 25%;
+  height: 100px;
+  top:-15px;
+  left: 4%;
+  float: left;
+}
+.add_image_content{
+  position: static;
+  width: 100%;
+  height: 90px;
+  margin: 0% 4%;
+  float: left;
+  box-shadow:1px 1px 5px rgb(238, 236, 236); 
+  border:1px solid rgba(255, 255, 255, 0.897)
+}
+.protext_block{
+  position: static;
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+}
+.protext_bundle{
+  position: static;
+  margin: 10% 5%;
+}
+.protext_title{
+    position: static;
+    width: 30%;
+    font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    font-weight: bolder;
+}
+.protext_content{
+    position: static;
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+    font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+.textarea_bundle{
+  position: static;
+  height: auto;
+  margin: 10% 5%;
+}
+.textarea_cs{
+  width: 100%;
+  height: 200px;
+  border:1px solid  rgb(192, 186, 186);
+  font: 12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic; 
+  margin-top: 5%;
+}
+.picker_bundle{
+  float: left;
+  margin-left: 5%;
+  width: 45%;
+  height:40px;
+}
+.picker_title{
+  position:static;
+  width:50%;
+  font:12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic;
+  font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+  font-weight:bolder;
+  float: left
+}
+.picker_text{
+  float: left;
+  width: 100%;
+  font:12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif,italic;
+  font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+  margin-top:-15%;
+}
+.input_text{
+  font: 13px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; 
+  text-align: center;
+  border-bottom: 1px solid  rgb(192, 186, 186);  
+  padding-left: 5%;
+  padding-top: 3%;
+}
+
+.userbtn{
+  padding: 0 60rpx;
+  background-color: #19be6b;
+  margin: 20rpx 0 200rpx;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 14px;
+  border: 0 !important;
+  position: relative;
+  text-decoration: none;
+  height: 44px;
+  line-height: 44px;
+  box-shadow: inset 0 0 0 1px #19be6b;  
+  background: #fff !important;
+  color: #19be6b !important;
+  border-radius: 10rpx;
+}
+.btn_bundle{
+  width: 30%;
+  height:auto;
+  margin: 0% 35%;
+}
+.pick_styl{
+  width:64px;
+height:20px;
+float:left;
+font: 13px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; 
+text-align: center;
+
+}

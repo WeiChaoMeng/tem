@@ -1,0 +1,9 @@
+<!--pages/auth/auth.wxml-->
+<view class="auth">
+  <image src="/resource/wechat.png" class="img" mode="aspectFit"></image>
+  <view class="title">微信授权页面</view>
+  <view class="describe">此页面是微信授权页面，点击下方按钮弹出授权或跳转页面</view>
+    <button class="btn" open-type='openSetting' >点击微信授权</button>
+    <button  class="btn" open-type='getUserInfo' bindgetuserinfo='handler' >授权完成登录</button>
+  <navigator wx:if="{{!showFlag}}" class="btn" url="/pages/index/index" open-type="reLaunch" hover-class="other-navigator-hover">已经授权点击调转</navigator>
+</view>

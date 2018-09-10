@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class='container' >Welcome</view>
+<form class='form' bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="input_view">
+    <view class="form_title"></view>
+    <input class='form_input' name="username" value="{{username}}" placeholder="please input your name" />
+  </view>
+
+  <view class="input_view">
+    <view class="form_title"></view>
+    <input class='form_input' name="password" value="{{password}}" placeholder="please input your password" />
+  </view>
+
+  <view class="btn-area">
+    <button class='form_button'  formType="submit">登录</button>
+    <button class='form_button' formType="reset">重置</button>
+  </view>
+</form>

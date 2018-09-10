@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class='page'>
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location class='page_map'></map>
+
+</view>
+  <cover-view class="controls">
+
+    <cover-view class='btn_div' bindtap='shootPhoto' >
+      <cover-image class='btn_img' src='/resource/carmera.png' ></cover-image>
+      <cover-view class='btn_text' >路灯病害</cover-view>
+    </cover-view>
+
+    <cover-view class='btn_div' bindtap='maintainLamps' >
+      <cover-image class='btn_img' src='/resource/Repair.png' ></cover-image>
+      <cover-view class='btn_text' >病害维护</cover-view>
+    </cover-view>
+
+  </cover-view>
